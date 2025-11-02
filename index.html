@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penerapan HTTPS - Netlify & Cloudflare SSL</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Penerapan Implementasi Website Sederhana dengan HTTPS</h1>
+        <h2>Menggunakan Netlify dan Cloudflare SSL</h2>
+    </header>
+
+    <main>
+        <section class="content">
+            <p>
+                Website ini dibuat untuk mendemonstrasikan penerapan 
+                <strong>HTTPS (Hypertext Transfer Protocol Secure)</strong> 
+                menggunakan sertifikat SSL bawaan dari <strong>Netlify</strong>. 
+                HTTPS memastikan koneksi antara pengguna dan server tetap aman dan terenkripsi.
+            </p>
+
+            <div class="check-section">
+                <button id="checkHTTPS" onclick="checkHTTPS()">Cek HTTPS</button>
+                <p id="result"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 | Dibuat oleh Alfiaturrahmi | Cloud Computing & Security Project</p>
+    </footer>
+
+    <!-- 🔽 Taruh di sini baru benar -->
+    <script src="script.js"></script>
+
+    <script>
+        function checkHTTPS() {
+            if (window.location.protocol === "https:") {
+                document.getElementById("result").innerText = "✅ Website ini menggunakan HTTPS dan koneksi aman.";
+                document.getElementById("result").style.color = "green";
+            } else {
+                document.getElementById("result").innerText = "❌ Website ini belum menggunakan HTTPS.";
+                document.getElementById("result").style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
