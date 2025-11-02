@@ -1,10 +1,9 @@
 // script.js
 function cekHTTPS() {
-  const result = document.createElement('p');
-  if (location.protocol === 'https:') {
-    result.textContent = '✅ Website ini sudah menggunakan HTTPS dan aman.';
+  const result = document.getElementById("hasil");
+  if (window.location.protocol === "https:") {
+    result.textContent = "✅ HTTPS aktif — Website ini aman!";
   } else {
-    result.textContent = '❌ Website ini belum menggunakan HTTPS.';
+    result.textContent = "❌ Website belum menggunakan HTTPS.";
   }
-  document.body.appendChild(result);
 }
